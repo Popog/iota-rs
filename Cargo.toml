@@ -1,0 +1,8 @@
+[package]
+name = "iota"
+version = "0.1.0"
+authors = ["Popog"]
+
+[lib]
+name = "iota"
+plugin = true
