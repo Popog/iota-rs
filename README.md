@@ -58,8 +58,25 @@ consts!{
 }
 ```
 
-As you may have noticed, there are some differences:
+Rust sans-plugin:
+```
+// bit0 == 1, mask0 == 0
+const BIT0: i32 = 1 << 0;
+const MASK0: i32 = 1<<0 - 1;
+
+// bit1 == 2, mask1 == 1
+const BIT1: i32 = 1 << 1;
+const MASK1: i32 = 1<<1 - 1;
+
+// bit3 == 8, mask3 == 7
+const BIT3: i32 = 1 << 3;
+const MASK3: i32 = 1<<1 - 3;
+```
+
+As you can see, compared to the base langauge, this plugin makes it easy to create a large number of similar numerical constants without a bunch of error-prone copy-pasting or having to define your own short-term use macros.
+
+For those coming from Go, you may have noticed some differences:
 * Rust prefers ALL_CAPS constants, and does not base visibility on capitalization, so exported constants must be marked as "pub".
-* Rust constants must be typed.
+* Rust constants must be explicitly typed.
 * iota is not a reserved keyword, but a macro invocation.
 * Rust multiple assignment uses a more tuple like structure.
