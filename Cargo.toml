@@ -2,6 +2,12 @@
 name = "iota"
 version = "0.1.0"
 authors = ["Popog"]
+description = "A rust macro for other Go refuges who miss const blocks and iota."
+repository = "https://github.com/Popog/iota-rs"
+readme = "README.md"
+keywords = ["macro", "plugin", "iota", "golang"]
+license = "MIT"
+license-file = "LICENSE"
 
 [lib]
 name = "iota"

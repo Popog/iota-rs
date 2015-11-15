@@ -1,6 +1,6 @@
 # iota-rs
 
-A macro for other Go refuges who miss const blocks and iota in rust.
+A rust macro for other Go refuges who miss const blocks and iota.
 
 Go:
 ```
