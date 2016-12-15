@@ -41,7 +41,7 @@ const (
 	bit0, mask0 = 1 << iota, 1<<iota - 1  // bit0 == 1, mask0 == 0
 	bit1, mask1                           // bit1 == 2, mask1 == 1
 	_, _                                  // skips iota == 2
-	bit3, mask3                           // bit3 == 8, mask3 == 7
+	Bit3, Mask3                           // bit3 == 8, mask3 == 7
 )
 ```
 
@@ -54,7 +54,7 @@ consts!{
 	(BIT0, MASK0): (i32, i32) = (1 << iota!(), 1<<iota!() - 1);  // bit0 == 1, mask0 == 0
 	(BIT1, MASK1);                                               // bit1 == 2, mask1 == 1
 	(_, _);                                                      // skips iota == 2
-	(BIT3, MASK3);                                               // bit3 == 8, mask3 == 7
+	(pub BIT3, pub MASK3);                                       // bit3 == 8, mask3 == 7
 }
 ```
 
@@ -69,8 +69,8 @@ const BIT1: i32 = 1 << 1;
 const MASK1: i32 = 1<<1 - 1;
 
 // bit3 == 8, mask3 == 7
-const BIT3: i32 = 1 << 3;
-const MASK3: i32 = 1<<1 - 3;
+pub const BIT3: i32 = 1 << 3;
+pub const MASK3: i32 = 1<<1 - 3;
 ```
 
 As you can see, compared to the base langauge, this plugin makes it easy to create a large number of similar numerical constants without a bunch of error-prone copy-pasting or having to define your own short-term use macros.

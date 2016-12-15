@@ -1,6 +1,6 @@
 [package]
 name = "iota-rs"
-version = "0.1.1"
+version = "0.1.2"
 authors = ["Popog"]
 description = "A rust macro for other Go refuges who miss const blocks and iota."
 repository = "https://github.com/Popog/iota-rs"

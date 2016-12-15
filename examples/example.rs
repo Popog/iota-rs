@@ -5,7 +5,7 @@ consts!{
     TEST_1_1: i32 = iota!();
     TEST_1_2;
 
-    // error: found tuple, expected identifier
+    // error: found tuple, expected single identifier
     //(TEST_1_3);
 }
 
@@ -15,21 +15,21 @@ consts!{
     (_, _);
     (TEST_2_3, TEST_2_4);
 
-    // error: expected 2 identifiers, found 1
-    // (TEST_2_5);
+    // error: expected 2 identifier(s), found 1
+    //(TEST_2_5);
 
-    // error: expected 1 types, found 2
-    // (TEST_2_6): (i32, i32) = (2+iota!(), 1 << (2+iota!()));
+    // error: expected 1 type(s), found 2
+    //(TEST_2_6): (i32, i32) = (2+iota!(), 1 << (2+iota!()));
 
-    // error: expected 1 expressions, found 2
-    // (TEST_2_7): (i32) = (2+iota!(), 1 << (2+iota!()));
+    // error: expected 1 expression(s), found 2
+    //(TEST_2_7): (i32) = (2+iota!(), 1 << (2+iota!()));
 }
 
 consts!{
     (TEST_3_1): (i32) = (iota!());
     (TEST_3_2);
 
-    // error: found identifier, expected tuple
+    // error: found single identifier, expected tuple
     //TEST_3_3;
 }
 
